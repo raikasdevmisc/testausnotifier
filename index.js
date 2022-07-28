@@ -25,6 +25,7 @@ const getNewVideos = async () => {
       const oldVideo = data.youtube[channel] || {
         videoId: ''
       };
+      console.log(JSON.stringify(videos))
       if (oldVideo.videoId !== videos[0].videoId) {
         data.youtube[channel] = videos[0];
         resolve(videos[0]);
